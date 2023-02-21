@@ -62,10 +62,9 @@ button.textContent = siteContent.cta.button;
 const cta_img = document.getElementById('cta-img');
 cta_img.setAttribute('src',siteContent.images["cta-img"]);
 
-const mainTextHeaders = document.querySelectorAll(".main-content .text-content");
+const mainTextHeaders = document.querySelectorAll(".main-content .text-content h4, .main-content .text-content p");
 mainTextHeaders.forEach((e,i)=>{
-  e.querySelector("h4").textContent = siteContent["ana-içerik"][Object.keys(siteContent["ana-içerik"])[2*i]]
-  e.querySelector("p").textContent = siteContent["ana-içerik"][Object.keys(siteContent["ana-içerik"])[2*i+1]]
+  e.textContent = siteContent["ana-içerik"][Object.keys(siteContent["ana-içerik"])[i]]
 })
 
 const middle_img = document.getElementById('middle-img');
@@ -81,7 +80,7 @@ contactP.forEach((e,i)=>{
 
 const footer = document.querySelector('footer a');
 footer.textContent = siteContent.footer.copyright;
-footer.classList.add("bold");
+footer.classList.add("bold")
 
 
 
